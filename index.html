@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Ultra-X WebRTC</title>
+
+    <script src="jQuery.js"></script>
+    <script src="video-stream-merger.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+
+        $(function () {
+
+            Demo.init(name);
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <div id="nameInput">
+        <form name="frmName" id="frmName">
+
+            <input type="text" name="iName" id="iName" placeholder="Enter your name" required>
+
+            <input type="submit" id="frmSubmit" value="Submit">
+            <div id="rMessage"></div>
+        </form>
+    </div>
+
+    <video autoplay muted controls id="videoCtr" width="480" height="100"></video>
+    <video autoplay muted controls id="remoteVideoCtr" width="480" height="100"></video>
+    <!--<form name="frmChat" id="frmChat" style="display: none;">
+
+        <input type="text" name="chat-user" id="chat-user" placeholder="Name" class="chat-input" required />
+        <input type="text" name="chat-message" id="chat-message" placeholder="Message" class="chat-input chat-message"
+            required />
+        <input type="submit" id="btnSend" name="send-chat-message" value="Send">
+    </form> -->
+    <video autoplay muted controls id="videoCtrRec" width="100" height="100" style="display:none"></video>
+
+    <button id="startConnection">Start Connection</button>
+
+    <button id="btnMuteUnmute">UnMute</button>
+    <button id="btnStartStopCam">Start Camera</button>
+    <button id="btnStartStopScreenshare">Screen Share</button>
+    <button id="btnStartReco">Start Recording</button>
+    <button id="btnPauseReco" style="display:none">Pause</button>
+    <button id="btnResumeReco" style="display:none">Resume</button>
+    <button id="btnStopReco" style="display:none">Stop</button>
+
+    <a href="" id="downloadRecording" style="display:none">Download</a>
+
+    <div id="chat-box"></div>
+
+    <br>
+    <br>
+</body>
+
+</html>
